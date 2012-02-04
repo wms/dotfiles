@@ -10,7 +10,6 @@ things that I have no cause to use and included only one colour scheme
 Assuming you cloned this repo to `$HOME/dotfiles`, then the best way to source
 these files is to put the following in `$HOME/.vimrc`:
 
-``` set runtimepath+=~/dotfiles/vim
-set path+=~/dotfiles/vim
-source ~/dotfiles/.vimrc
-```
+    set runtimepath+=~/dotfiles/vim
+    path+=~/dotfiles/vim
+    source ~/dotfiles/.vimrc
