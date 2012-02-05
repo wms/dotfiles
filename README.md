@@ -13,3 +13,13 @@ these files is to put the following in `$HOME/.vimrc`:
     set runtimepath+=~/dotfiles/vim
     path+=~/dotfiles/vim
     source ~/dotfiles/.vimrc
+
+##screen
+
+My .screenrc is a simple one that yields a useful caption line and a few helpful
+preferences.
+
+Assuming you cloned this repo to `$HOME/dotfiles`, then the best way to source
+my config is to put the following in `$HOME/.screenrc`:
+
+    source $HOME/dotfiles/.screenrc
