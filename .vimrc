@@ -166,6 +166,16 @@ nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 "Show/hide current line highlight
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+" Improve autocomplete menu
+inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+" disable exmode
+:map Q <Nop>
+
 "-----------------------------------------------------------------------------
 " NERD Tree Plugin Settings
 "-----------------------------------------------------------------------------
@@ -176,13 +186,6 @@ let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
 " Show the bookmarks table on startup
 let NERDTreeShowBookmarks=1
 
-" Improve autocomplete menu
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
-
-" disable exmode
-:map Q <Nop>
+" XPtemplate settings
+let g:xptemplate_key = '<Tab>'
+let php_noShortTags = 1
