@@ -73,6 +73,7 @@ set hlsearch
 set incsearch
 " Turn off that stupid highlight search
 nmap <silent> ,n :set invhls<CR>:set hls?<CR>
+set number
 
 " GUI Configuration
 
@@ -87,9 +88,8 @@ set guicursor+=r-cr:hor20-Cursor
 set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 " set the gui options the way I like
 set guioptions=ac
-" xoria256 is a nice low-contrast scheme that works quite well even under the
-" console, provided it supports 256 colours
-colorscheme xoria256
+set background=dark
+colorscheme solarized
 
 if has("gui_running")
     highlight Pmenu guibg=brown gui=bold
