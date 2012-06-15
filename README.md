@@ -11,7 +11,7 @@ Assuming you cloned this repo to `$HOME/dotfiles`, then the best way to source
 these files is to put the following in `$HOME/.vimrc`:
 
     set runtimepath+=~/dotfiles/vim
-    path+=~/dotfiles/vim
+    set path+=~/dotfiles/vim
     source ~/dotfiles/.vimrc
 
 ##screen
