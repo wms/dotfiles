@@ -1,4 +1,7 @@
-" General Settings
+" Change ~/dotfiles/vimbundles if you cloned to a different path
+call pathogen#infect('~/dotfiles/vimbundles')
+syntax on
+filetype plugin indent on
 
 set nocompatible
 set history=100
@@ -74,6 +77,7 @@ set incsearch
 " Turn off that stupid highlight search
 nmap <silent> ,n :set invhls<CR>:set hls?<CR>
 set number
+set tags=./tags;
 
 " GUI Configuration
 
@@ -88,10 +92,12 @@ set guicursor+=r-cr:hor20-Cursor
 set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 " set the gui options the way I like
 set guioptions=ac
-set background=dark
-colorscheme solarized
 
+if !has("gui_running")
+    colorscheme ir_black
+end
 if has("gui_running")
+    colorscheme rdark
     highlight Pmenu guibg=brown gui=bold
     set guifont=Monaco\ 9,Monaco:h10,Consolas:h12
     if !exists("g:vimrcloaded")
@@ -108,12 +114,6 @@ if has("gui_running")
 endif
 
 
-" Syntax highlighting/indentation
-
-" switch on syntax highlighting.
-syntax on
-" enable filetype specific indentation
-filetype plugin indent on
 " syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
 
@@ -186,3 +186,7 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 " disable exmode
 :map Q <Nop>
+
+" Settings for VimClojure
+let vimclojure#HighlightBuiltins=1      " Highlight Clojure's builtins
+let vimclojure#ParenRainbow=1           " Rainbow parentheses'!

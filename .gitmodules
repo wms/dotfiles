@@ -1,0 +1,19 @@
+[submodule "vimbundles/nerdtree"]
+    path = vimbundles/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "vimbundles/vimclojure"]
+    path = vimbundles/vimclojure
+    url = https://github.com/vim-scripts/VimClojure.git
+
+[submodule "vimbundles/vim_colors"]
+    path = vimbundles/vim_colors
+    url = https://github.com/squil/vim_colors.git
+
+[submodule "vimbundles/vim-fugitive"]
+    path = vimbundles/vim-fugitive
+    url = https://github.com/tpope/vim-fugitivegit
+
+[submodule "vimbundles/vim-slime"]
+    path = vimbundles/vim-slime
+    url = https://github.com/jpalardy/vim-slime.git
