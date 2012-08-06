@@ -94,7 +94,7 @@ set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 set guioptions=ac
 
 if !has("gui_running")
-    colorscheme ir_black
+    colorscheme IR_Black
 end
 if has("gui_running")
     colorscheme rdark
