@@ -17,3 +17,14 @@
 [submodule "vimbundles/vim-slime"]
     path = vimbundles/vim-slime
     url = https://github.com/jpalardy/vim-slime.git
+[submodule "vimbundles/vim-less"]
+	path = vimbundles/vim-less
+	url = https://github.com/groenewege/vim-less.git
+
+[submodule "vimbundles/zencoding-vim"]
+	path = vimbundles/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
+
+[submodule "vimbundles/vim-surround"]
+	path = vimbundles/vim-surround
+	url = https://github.com/tpope/vim-surround.git
