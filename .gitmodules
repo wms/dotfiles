@@ -28,3 +28,6 @@
 [submodule "vimbundles/vim-surround"]
 	path = vimbundles/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vimbundles/vim-vividchalk"]
+	path = vimbundles/vim-vividchalk
+	url = https://github.com/tpope/vim-vividchalk.git
