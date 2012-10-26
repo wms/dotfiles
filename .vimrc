@@ -93,11 +93,8 @@ set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 " set the gui options the way I like
 set guioptions=ac
 
-if !has("gui_running")
-    colorscheme IR_Black
-end
+colorscheme vividchalk
 if has("gui_running")
-    colorscheme rdark
     highlight Pmenu guibg=brown gui=bold
     set guifont=Monaco\ 9,Monaco:h10,Consolas:h12
     if !exists("g:vimrcloaded")
