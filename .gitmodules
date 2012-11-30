@@ -31,3 +31,6 @@
 [submodule "vimbundles/vim-vividchalk"]
 	path = vimbundles/vim-vividchalk
 	url = https://github.com/tpope/vim-vividchalk.git
+[submodule "vimbundles/vim-twig"]
+	path = vimbundles/vim-twig
+	url = https://github.com/beyondwords/vim-twig.git
