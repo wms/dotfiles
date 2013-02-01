@@ -40,3 +40,6 @@
 [submodule "powerline"]
 	path = powerline
 	url = https://github.com/Lokaltog/powerline.git
+[submodule "vimbundles/vim-unimpaired"]
+	path = vimbundles/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
