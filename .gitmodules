@@ -34,3 +34,9 @@
 [submodule "vimbundles/vim-twig"]
 	path = vimbundles/vim-twig
 	url = https://github.com/beyondwords/vim-twig.git
+[submodule "vimbundles/php.vim"]
+	path = vimbundles/php.vim
+	url = https://github.com/shawncplus/php.vim.git
+[submodule "powerline"]
+	path = powerline
+	url = https://github.com/Lokaltog/powerline.git
