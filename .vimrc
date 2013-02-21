@@ -29,8 +29,6 @@ set hidden
 " drop a marker at the end of a change area (ie using 'cw') instead of
 " deleting it
 set cpoptions=Bces$
-" set the status line the way i like it
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
 " don't update the display while executing macros
@@ -75,7 +73,7 @@ set hlsearch
 " incrementally match the search
 set incsearch
 " Turn off that stupid highlight search
-nmap <silent> ,n :set invhls<CR>:set hls?<CR>
+nmap <silent> \n :set invhls<CR>:set hls?<CR>
 set number
 set tags=./tags;
 
@@ -188,5 +186,15 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 let vimclojure#HighlightBuiltins=1      " Highlight Clojure's builtins
 let vimclojure#ParenRainbow=1           " Rainbow parentheses'!
 
-" Enable powerline
+" Enable and customise powerline
 set rtp+=~/dotfiles/powerline/powerline/bindings/vim
+set noshowmode
+
+" ctrlp config
+:nmap ; :CtrlPBuffer<CR>
+":let g:ctrlp_match_window_bottom = 0
+":let g:ctrlp_match_window_reversed = 0
+:let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+:let g:ctrlp_working_path_mode = 0
+:let g:ctrlp_dotfiles = 0
+:let g:ctrlp_switch_buffer = 0
