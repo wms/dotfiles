@@ -95,19 +95,10 @@ colorscheme vividchalk
 if has("gui_running")
     highlight Pmenu guibg=brown gui=bold
     set guifont=Monaco\ 9,Monaco:h10,Consolas:h12
-    if !exists("g:vimrcloaded")
-        winpos 0 0
-        if ! &diff
-            winsize 130 90
-        else
-            winsize 227 90
-        endif
-        let g:vimrcloaded = 1
-    else
-        :highlight Pmenu ctermbg=238 gui=bold
-    endif
 endif
 
+" Syntax highlighting customisation
+highlight Comment gui=NONE
 
 " syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
@@ -161,6 +152,8 @@ nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 "Show/hide current line highlight
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+
+inoremap <C-]> <End>
 "-----------------------------------------------------------------------------
 " NERD Tree Plugin Settings
 "-----------------------------------------------------------------------------
@@ -172,12 +165,12 @@ let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
 let NERDTreeShowBookmarks=1
 
 " Improve autocomplete menu
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+"inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+"inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+"inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+"inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+"inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+"inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 " disable exmode
 :map Q <Nop>
@@ -191,10 +184,28 @@ set rtp+=~/dotfiles/powerline/powerline/bindings/vim
 set noshowmode
 
 " ctrlp config
-:nmap ; :CtrlPBuffer<CR>
-":let g:ctrlp_match_window_bottom = 0
-":let g:ctrlp_match_window_reversed = 0
-:let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
-:let g:ctrlp_working_path_mode = 0
-:let g:ctrlp_dotfiles = 0
-:let g:ctrlp_switch_buffer = 0
+nmap ; :CtrlPBuffer<CR>
+"let g:ctrlp_match_window_bottom = 0
+"let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+
+"syntastic config
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_less_use_less_lint = 1
+let g:syntastic_html_checkers = []
+
+" unwanted whitespace highlighting
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
+"zencoding config
+let g:user_zen_leader_key='<C-e>'
+
+"delimitMate config
+let g:delimitMate_expand_cr = 1
+let g:delitMate_balance_matchpairs = 1

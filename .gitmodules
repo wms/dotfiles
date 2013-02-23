@@ -34,9 +34,6 @@
 [submodule "vimbundles/vim-twig"]
 	path = vimbundles/vim-twig
 	url = https://github.com/beyondwords/vim-twig.git
-[submodule "vimbundles/php.vim"]
-	path = vimbundles/php.vim
-	url = https://github.com/shawncplus/php.vim.git
 [submodule "powerline"]
 	path = powerline
 	url = https://github.com/Lokaltog/powerline.git
@@ -49,3 +46,18 @@
 [submodule "vimbundles/syntastic"]
 	path = vimbundles/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vimbundles/YouCompleteMe"]
+	path = vimbundles/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vimbundles/vim-autoclose"]
+	path = vimbundles/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git
+[submodule "vimbundles/delimitMate"]
+	path = vimbundles/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "vimbundles/php.vim"]
+	path = vimbundles/php.vim
+	url = https://github.com/StanAngeloff/php.vim
+[submodule "vimbundles/php-indent"]
+	path = vimbundles/php-indent
+	url = https://github.com/warrenseymour/PHP-Indenting-for-VIm.git
